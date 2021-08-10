@@ -69,6 +69,7 @@ body{
     font-size: 20px;
     font-weight: bolder;
     border-color: var(--main-color);
+    cursor: default;
 }
 .navSection2{
     display: flex;
@@ -85,6 +86,7 @@ body{
     outline: none;
     border-radius: 30px;
     transition: .3s;
+    cursor: pointer;
 }
 .darkTheme[type="checkbox"]::before{
     content: "";
