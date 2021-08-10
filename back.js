@@ -1,15 +1,33 @@
 window.setInterval(ClockCalculator,1000);
 function ThemeChanger(){
     const chBox=document.getElementsByClassName("darkTheme")[0];
+    let elements = document.getElementsByClassName("element");
     if(chBox.checked){
         document.documentElement.style.setProperty('--bg-color', '#28334AFF');
         document.documentElement.style.setProperty('--main-color', '#FBDE44FF');
         document.documentElement.style.setProperty('--hover-color', '#F65058FF');
+        document.documentElement.style.setProperty('--banner-hover-color', '#4e7e66');
+        for(i=0;i<elements.length;++i){
+            elements[i].style.color="var(--main-color)";
+        }
+        let P_Blocks=document.getElementsByClassName("P-Block");
+        for(i=0;i<P_Blocks.length;++i){
+            P_Blocks[i].style.color="var(--hover-color)";
+            P_Blocks[i].style.borderColor="var(--hover-color)";
+        }
     }
     else{
-        document.documentElement.style.setProperty('--bg-color', '#ffffff');
-        document.documentElement.style.setProperty('--main-color', '#4e7e66');
-        document.documentElement.style.setProperty('--hover-color', '#ffcc5c ');
+        document.documentElement.style.setProperty('--bg-color', 'rgb(159, 189, 255)');
+        document.documentElement.style.setProperty('--main-color', 'green');
+        document.documentElement.style.setProperty('--hover-color', '#ffcc5c');
+        document.documentElement.style.setProperty('--banner-hover-color', 'var(--bg-color)');
+        for(i=0;i<elements.length;++i){
+            if(elements[i].classList.contains("P-Block")){
+                elements[i].style.color="black";
+                continue;
+            }
+            elements[i].style.color="white";
+        }
     }
 
 }
