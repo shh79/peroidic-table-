@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Periodic Table</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="clock">
+                <p id="hour">00</p>&nbsp;
+                <p>:</p>&nbsp;
+                <p id="min">00</p>&nbsp;
+                <p>:</p>&nbsp;
+                <p id="sec">00</p>
+            </div>
+            <div class="banner" onclick="ConvertToJson();">
+                <p>Periodic Table</p>
+            </div>
+            <div class="navSection2">
+                <input type="checkbox" name="dark" class="darkTheme" onclick="ThemeChanger();" checked> &nbsp;&nbsp;&nbsp;
+                <div class="brand">
+                    <p>Hessam Hosseini</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="firstElem">
+                <div class="element h S-Block" onclick="ShowDetail(this);">
+                    <p>1</p>
+	                <h1>H</h1>
+	                <div class="detailText">Hydrogen 1 1</div>
+                </div>
+                <div class="perview">
+                    <p id="atomicNum">1</p>
+                    <h1 id="symbol">H</h1>
+                </div>
+                <div class="detail">
+                    <p id="detailText">Name: Hydrogen<br>Group: 1<br>Peroid: 1<br>Block: Gas</p>
+                </div>
+                <div class="element he S-Block" onclick="ShowDetail(this);">
+                    <p>2</p>
+                    <h1>He</h1>
+                    <div class="detailText">Helium 18 1</div>
+                </div>
+                <div class="fourElemLeft">
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>3</p>
+                        <h1>Li</h1>
+                        <div class="detailText">Lithium 1 2</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>4</p>
+                        <h1>Be</h1>
+                        <div class="detailText">Beryllium 2 2</div>
+                    </div>
+
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+	                    <p>11</p>
+	                    <h1>Na</h1>
+	                    <div class="detailText">Sodium 1 3</div>
+                    </div>
+
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+	                    <p>12</p>
+	                    <h1>Mg</h1>
+	                    <div class="detailText">Magnesium 2 3</div>
+                    </div>
+                </div>
+                <div class="twelveElemRight">
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>5</p>
+                        <h1>B</h1>
+                        <div class="detailText">Boron 13 2</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>6</p>
+                        <h1>C</h1>
+                        <div class="detailText">Carbon 14 2</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>7</p>
+                        <h1>N</h1>
+                        <div class="detailText">Nitrogen 15 2</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>8</p>
+                        <h1>O</h1>
+                        <div class="detailText">Oxygen 16 2</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>9</p>
+                        <h1>F</h1>
+                        <div class="detailText">Fluorine 17 2</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>10</p>
+                        <h1>Ne</h1>
+                        <div class="detailText">Neon 18 2</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>13</p>
+	                    <h1>Al</h1>
+	                    <div class="detailText">Aluminium 13 3</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>14</p>
+	                    <h1>Si</h1>
+	                    <div class="detailText">Silicon 14 3</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>15</p>
+	                    <h1>P</h1>
+	                    <div class="detailText">Phosphorus 15 3</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>16</p>
+	                    <h1>S</h1>
+	                    <div class="detailText">Sulfur 16 3</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>17</p>
+	                    <h1>Cl</h1>
+	                    <div class="detailText">Chlorine 17 3</div>
+                    </div>
+
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+	                    <p>18</p>
+	                    <h1>Ar</h1>
+	                    <div class="detailText">Argon 18 3</div>
+                    </div>
+                </div>
+                <div class="otherElem">
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>19</p>
+                        <h1>K</h1>
+                        <div class="detailText">Potassium 1 4</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>20</p>
+                        <h1>Ca</h1>
+                        <div class="detailText">Calcium 2 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>21</p>
+                        <h1>Sc</h1>
+                        <div class="detailText">Scandium 3 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>22</p>
+                        <h1>Ti</h1>
+                        <div class="detailText">Titanium 4 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>23</p>
+                        <h1>V</h1>
+                        <div class="detailText">Vanadium 5 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>24</p>
+                        <h1>Cr</h1>
+                        <div class="detailText">Chromium 6 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>25</p>
+                        <h1>Mn</h1>
+                        <div class="detailText">Manganese 7 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>26</p>
+                        <h1>Fe</h1>
+                        <div class="detailText">Iron 8 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>27</p>
+                        <h1>Co</h1>
+                        <div class="detailText">Cobalt 9 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>28</p>
+                        <h1>Ni</h1>
+                        <div class="detailText">Nickel 10 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>29</p>
+                        <h1>Cu</h1>
+                        <div class="detailText">Copper 11 4</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>30</p>
+                        <h1>Zn</h1>
+                        <div class="detailText">Zinc 12 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>31</p>
+                        <h1>Ga</h1>
+                        <div class="detailText">Gallium 13 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>32</p>
+                        <h1>Ge</h1>
+                        <div class="detailText">Germanium 14 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>33</p>
+                        <h1>As</h1>
+                        <div class="detailText">Arsenic 15 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>34</p>
+                        <h1>Se</h1>
+                        <div class="detailText">Selenium 16 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>35</p>
+                        <h1>Br</h1>
+                        <div class="detailText">Bromine 17 4</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>36</p>
+                        <h1>Kr</h1>
+                        <div class="detailText">Krypton 18 4</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>37</p>
+                        <h1>Rb</h1>
+                        <div class="detailText">Rubidium 1 5</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>38</p>
+                        <h1>Sr</h1>
+                        <div class="detailText">Strontium 2 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>39</p>
+                        <h1>Y</h1>
+                        <div class="detailText">Yttrium 3 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>40</p>
+                        <h1>Zr</h1>
+                        <div class="detailText">Zirconium 4 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>41</p>
+                        <h1>Nb</h1>
+                        <div class="detailText">Niobium 5 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>42</p>
+                        <h1>Mo</h1>
+                        <div class="detailText">Molybdenum 6 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>43</p>
+                        <h1>Tc</h1>
+                        <div class="detailText">Technetium 7 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>44</p>
+                        <h1>Ru</h1>
+                        <div class="detailText">Ruthenium 8 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>45</p>
+                        <h1>Rh</h1>
+                        <div class="detailText">Rhodium 9 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>46</p>
+                        <h1>Pd</h1>
+                        <div class="detailText">Palladium 10 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>47</p>
+                        <h1>Ag</h1>
+                        <div class="detailText">Silver 11 5</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>48</p>
+                        <h1>Cd</h1>
+                        <div class="detailText">Cadmium 12 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>49</p>
+                        <h1>In</h1>
+                        <div class="detailText">Indium 13 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>50</p>
+                        <h1>Sn</h1>
+                        <div class="detailText">Tin 14 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>51</p>
+                        <h1>Sb</h1>
+                        <div class="detailText">Antimony 15 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>52</p>
+                        <h1>Te</h1>
+                        <div class="detailText">Tellurium 16 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>53</p>
+                        <h1>I</h1>
+                        <div class="detailText">Iodine 17 5</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>54</p>
+                        <h1>Xe</h1>
+                        <div class="detailText">Xenon 18 5</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>55</p>
+                        <h1>Cs</h1>
+                        <div class="detailText">Caesium 1 6</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>56</p>
+                        <h1>Ba</h1>
+                        <div class="detailText">Barium 2 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>57</p>
+                        <h1>La</h1>
+                        <div class="detailText">Lanthanum n/a 6</div>
+                    </div>
+
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>72</p>
+                        <h1>Hf</h1>
+                        <div class="detailText">Hafnium 4 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>73</p>
+                        <h1>Ta</h1>
+                        <div class="detailText">Tantalum 5 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>74</p>
+                        <h1>W</h1>
+                        <div class="detailText">Tungsten 6 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>75</p>
+                        <h1>Re</h1>
+                        <div class="detailText">Rhenium 7 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>76</p>
+                        <h1>Os</h1>
+                        <div class="detailText">Osmium 8 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>77</p>
+                        <h1>Ir</h1>
+                        <div class="detailText">Iridium 9 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>78</p>
+                        <h1>Pt</h1>
+                        <div class="detailText">Platinum 10 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>79</p>
+                        <h1>Au</h1>
+                        <div class="detailText">Gold 11 6</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>80</p>
+                        <h1>Hg</h1>
+                        <div class="detailText">Mercury 12 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>81</p>
+                        <h1>Tl</h1>
+                        <div class="detailText">Thallium 13 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>82</p>
+                        <h1>Pb</h1>
+                        <div class="detailText">Lead 14 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>83</p>
+                        <h1>Bi</h1>
+                        <div class="detailText">Bismuth 15 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>84</p>
+                        <h1>Po</h1>
+                        <div class="detailText">Polonium 16 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>85</p>
+                        <h1>At</h1>
+                        <div class="detailText">Astatine 17 6</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>86</p>
+                        <h1>Rn</h1>
+                        <div class="detailText">Radon 18 6</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>87</p>
+                        <h1>Fr</h1>
+                        <div class="detailText">Francium 1 7</div>
+                    </div>
+                    
+                    <div class="element S-Block" onclick="ShowDetail(this);">
+                        <p>88</p>
+                        <h1>Ra</h1>
+                        <div class="detailText">Radium 2 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>89</p>
+                        <h1>Ac</h1>
+                        <div class="detailText">Actinium n/a 7</div>
+                    </div>
+
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>104</p>
+                        <h1>Rf</h1>
+                        <div class="detailText">Rutherfordium 4 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>105</p>
+                        <h1>Db</h1>
+                        <div class="detailText">Dubnium 5 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>106</p>
+                        <h1>Sg</h1>
+                        <div class="detailText">Seaborgium 6 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>107</p>
+                        <h1>Bh</h1>
+                        <div class="detailText">Bohrium 7 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>108</p>
+                        <h1>Hs</h1>
+                        <div class="detailText">Hassium 8 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>109</p>
+                        <h1>Mt</h1>
+                        <div class="detailText">Meitnerium 9 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>110</p>
+                        <h1>Ds</h1>
+                        <div class="detailText">Darmstadtium 10 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>111</p>
+                        <h1>Rg</h1>
+                        <div class="detailText">Roentgenium 11 7</div>
+                    </div>
+                    
+                    <div class="element D-Block" onclick="ShowDetail(this);">
+                        <p>112</p>
+                        <h1>Cn</h1>
+                        <div class="detailText">Copernicium 12 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>113</p>
+                        <h1>Nh</h1>
+                        <div class="detailText">Nihonium 13 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>114</p>
+                        <h1>Fl</h1>
+                        <div class="detailText">Flerovium 14 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>115</p>
+                        <h1>Mc</h1>
+                        <div class="detailText">Moscovium 15 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>116</p>
+                        <h1>Lv</h1>
+                        <div class="detailText">Livermorium 16 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>117</p>
+                        <h1>Ts</h1>
+                        <div class="detailText">Tennessine 17 7</div>
+                    </div>
+                    
+                    <div class="element P-Block" onclick="ShowDetail(this);">
+                        <p>118</p>
+                        <h1>Og</h1>
+                        <div class="detailText">Oganesson 18 7</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="radioElem">
+                <div class="designedElem">
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>58</p>
+                        <h1>Ce</h1>
+                        <div class="detailText">Cerium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>59</p>
+                        <h1>Pr</h1>
+                        <div class="detailText">Praseodymium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>60</p>
+                        <h1>Nd</h1>
+                        <div class="detailText">Neodymium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>61</p>
+                        <h1>Pm</h1>
+                        <div class="detailText">Promethium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>62</p>
+                        <h1>Sm</h1>
+                        <div class="detailText">Samarium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>63</p>
+                        <h1>Eu</h1>
+                        <div class="detailText">Europium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>64</p>
+                        <h1>Gd</h1>
+                        <div class="detailText">Gadolinium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>65</p>
+                        <h1>Tb</h1>
+                        <div class="detailText">Terbium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>66</p>
+                        <h1>Dy</h1>
+                        <div class="detailText">Dysprosium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>67</p>
+                        <h1>Ho</h1>
+                        <div class="detailText">Holmium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>68</p>
+                        <h1>Er</h1>
+                        <div class="detailText">Erbium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>69</p>
+                        <h1>Tm</h1>
+                        <div class="detailText">Thulium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>70</p>
+                        <h1>Yb</h1>
+                        <div class="detailText">Ytterbium n/a 6</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>71</p>
+                        <h1>Lu</h1>
+                        <div class="detailText">Lutetium 3 6</div>
+                    </div>
+
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>90</p>
+                        <h1>Th</h1>
+                        <div class="detailText">Thorium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>91</p>
+                        <h1>Pa</h1>
+                        <div class="detailText">Protactinium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>92</p>
+                        <h1>U</h1>
+                        <div class="detailText">Uranium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>93</p>
+                        <h1>Np</h1>
+                        <div class="detailText">Neptunium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>94</p>
+                        <h1>Pu</h1>
+                        <div class="detailText">Plutonium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>95</p>
+                        <h1>Am</h1>
+                        <div class="detailText">Americium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>96</p>
+                        <h1>Cm</h1>
+                        <div class="detailText">Curium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>97</p>
+                        <h1>Bk</h1>
+                        <div class="detailText">Berkelium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>98</p>
+                        <h1>Cf</h1>
+                        <div class="detailText">Californium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>99</p>
+                        <h1>Es</h1>
+                        <div class="detailText">Einsteinium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>100</p>
+                        <h1>Fm</h1>
+                        <div class="detailText">Fermium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>101</p>
+                        <h1>Md</h1>
+                        <div class="detailText">Mendelevium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>102</p>
+                        <h1>No</h1>
+                        <div class="detailText">Nobelium n/a 7</div>
+                    </div>
+                    
+                    <div class="element F-Block" onclick="ShowDetail(this);">
+                        <p>103</p>
+                        <h1>Lr</h1>
+                        <div class="detailText">Lawrencium 3 7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="back.js"></script>
+</body>
+</html>
