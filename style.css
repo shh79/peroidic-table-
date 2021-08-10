@@ -28,7 +28,6 @@
     padding: 1.5px 2px 1.5px 2px;
     width: 100%;
     height: 45px;
-    position: sticky;
     background-color: rgb(27, 34, 49);
 }
 .clock{
@@ -99,13 +98,12 @@
     grid-area: wrapper;
     display: grid;
     width: 90%;
+    height: 100%;
     margin-top: 5px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 120px;
     justify-self: center;
     justify-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 .firstElem{
     display: grid;
@@ -113,17 +111,18 @@
     height: 100%;
     justify-self: center;
     justify-items: center;
+    align-items: center;
+    align-self: center;
     grid-template-columns: repeat(18,55px);
-    grid-template-rows: repeat(8,55px);
+    grid-template-rows: repeat(10,55px);
 }
 .radioElem{
     display: grid;
-    grid-template-columns: repeat(18,1fr);
+    grid-row: 9 / 11;
+    grid-column: 4 / 18;
 }
 .designedElem{
     display: grid;
-    grid-column: 4 / 18;
-    grid-row: 1 / 3;
     grid-template-columns: repeat(14,1fr);
     grid-template-rows: 55px 55px;
 }
